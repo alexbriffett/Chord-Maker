@@ -10,4 +10,4 @@ Instructions
 
 1) Download of git clone the repository.
 2) In the top-level directory run php -S localhost:8000 or similar.
-3) Browse to http://localhost:8000 and try choose a chord.
+3) Browse to http://localhost:8000 and choose a chord.
