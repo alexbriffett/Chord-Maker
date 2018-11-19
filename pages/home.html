@@ -1,0 +1,81 @@
+<!-- home.html -->
+<div class="container">
+    <div class="row">
+        <h3>Chord Name: {{chordRoot + " " + chordType}}</h3>
+    </div>
+    <div class="row">
+        <form class="form">
+            <div class="form-group">
+                <label class="form-check-label">Root note of chord</label>
+                <select class="form-control" ng-model="chordRoot" ng-change="getChord()">
+                    <option ng-repeat="root in chordRoots" value="{{root}}">{{root}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-check-label">Type of chord</label>
+                <select class="form-control" ng-model="chordType" ng-change="getChord()">
+                    <option ng-repeat="type in chordTypes" value="{{type.v}}">{{type.o}}</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <button class="play-button form-control align-items-center" ng-click="playChord()">Play Chord</button>
+        </div>
+    </div>
+    <div class="row piano">
+        <div class="keys">
+            <div class="key" id="key0" ng-click="playNote(0);"></div>
+            <div class="key black" id="key1" ng-click="playNote(1)"></div>
+            <div class="key" id="key2" ng-click="playNote(2)"></div>
+            <div class="key black" id="key3" ng-click="playNote(3)"></div>
+            <div class="key" id="key4" ng-click="playNote(4)"></div>
+            <div class="key" id="key5" ng-click="playNote(5)"></div>
+            <div class="key black" id="key6" ng-click="playNote(6)"></div>
+            <div class="key" id="key7" ng-click="playNote(7)"></div>
+            <div class="key black" id="key8" ng-click="playNote(8)"></div>
+            <div class="key" id="key9" ng-click="playNote(9)"></div>
+            <div class="key black" id="key10" ng-click="playNote(10)">C</div>
+            <div class="key" id="key11" ng-click="playNote(11)"></div>
+            <div class="key" id="key12" ng-click="playNote(12)"></div>
+            <div class="key black black1" id="key13" ng-click="playNote(13)"></div>
+            <div class="key" id="key14" ng-click="playNote(14)"></div>
+            <div class="key black black3" id="key15" ng-click="playNote(15)"></div>
+            <div class="key" id="key16" ng-click="playNote(16)"></div>
+            <div class="key" id="key17" ng-click="playNote(17)"></div>
+            <div class="key black black1" id="key18" ng-click="playNote(18)"></div>
+            <div class="key" id="key19" ng-click="playNote(19)"></div>
+            <div class="key black black2" id="key20" ng-click="playNote(20)"></div>
+            <div class="key" id="key21" ng-click="playNote(21)"></div>
+            <div class="key black black3" id="key22" ng-click="playNote(22)"></div>
+            <div class="key" id="key23" ng-click="playNote(23)"></div>
+
+            <audio ng-hide src="sounds/0.mp3" id="s0"/>
+            <audio ng-hide src="sounds/1.mp3" id="s1"/>
+            <audio ng-hide src="sounds/2.mp3" id="s2"/>
+            <audio ng-hide src="sounds/3.mp3" id="s3"/>
+            <audio ng-hide src="sounds/4.mp3" id="s4"/>
+            <audio ng-hide src="sounds/5.mp3" id="s5"/>
+            <audio ng-hide src="sounds/6.mp3" id="s6"/>
+            <audio ng-hide src="sounds/7.mp3" id="s7"/>
+            <audio ng-hide src="sounds/8.mp3" id="s8"/>
+            <audio ng-hide src="sounds/9.mp3" id="s9"/>
+            <audio ng-hide src="sounds/10.mp3" id="s10"/>
+            <audio ng-hide src="sounds/11.mp3" id="s11"/>
+            <audio ng-hide src="sounds/12.mp3" id="s12"/>
+            <audio ng-hide src="sounds/13.mp3" id="s13"/>
+            <audio ng-hide src="sounds/14.mp3" id="s14"/>
+            <audio ng-hide src="sounds/15.mp3" id="s15"/>
+            <audio ng-hide src="sounds/16.mp3" id="s16"/>
+            <audio ng-hide src="sounds/17.mp3" id="s17"/>
+            <audio ng-hide src="sounds/18.mp3" id="s18"/>
+            <audio ng-hide src="sounds/19.mp3" id="s19"/>
+            <audio ng-hide src="sounds/20.mp3" id="s20"/>
+            <audio ng-hide src="sounds/21.mp3" id="s21"/>
+            <audio ng-hide src="sounds/22.mp3" id="s22"/>
+            <audio ng-hide src="sounds/23.mp3" id="s23"/>
+        </div>
+    </div>
+</div>
+
