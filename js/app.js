@@ -73,7 +73,6 @@ chordApp.controller('mainController', function ($scope) {
     // Draw a single note on the keyboard
     $scope.drawNote = function(index) {
         var selector = '#key' + index;
-        console.log(selector);
         var key = angular.element(document.querySelector(selector));
 
         if (key.hasClass('black')) {
